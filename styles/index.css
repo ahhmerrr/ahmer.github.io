@@ -37,28 +37,56 @@
     color: yellow;
 }
 
+.bg-yellow {
+    background-color: yellow;
+}
+
 .orange {
     color: orange;
+}
+
+.bg-orange {
+    background-color: orange;
 }
 
 .dark-orange {
     color: darkorange;
 }
 
+.bg-dark-orange {
+    background-color: darkorange;
+}
+
 .darker-orange {
     color: rgb(255, 102, 0);
+}
+
+.bg-darker-orange {
+    background-color: rgb(255, 102, 0);
 }
 
 .red {
     color: crimson;
 }
 
+.bg-red {
+    background-color: crimson;
+}
+
 .blue {
     color: blue;
 }
 
+.bg-blue {
+    background-color: blue;
+}
+
 .green {
     color: green;
+}
+
+.bg-green {
+    background-color: green;
 }
 
 .bold {
@@ -351,6 +379,22 @@ button.media-button > img,
 a.media-button > img {
     width: 32px;
     height: 32px;
+}
+/* #endregion */
+
+/* ? exposure section styling */
+/* #region exposure */
+div.cs-progress-outer {
+    width: 100% - 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+div.cs-progress-inner {
+    height: 25px;
 }
 /* #endregion */
 
