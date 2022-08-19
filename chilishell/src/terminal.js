@@ -1,7 +1,11 @@
-let functions = {
+// ? commands that can be called by the user
+let commands = {
+    // ? clear the terminal screen
     clear: () => $("#terminalDisplay").html(""),
+
+    // ? clear screen and display welcome message again
     welcome: () => {
-        functions.clear();
+        commands.clear();
         log(
             `
                           <span class="yellow">(</span>                       
@@ -18,6 +22,8 @@ let functions = {
             "terminal-header"
         );
     },
+
+    // ? get contact info
     my: (args) => {
         if (args.length === 1) {
             log("Please enter argument(s) for this command.");
@@ -43,8 +49,11 @@ let functions = {
             });
         }
     },
+    // ? silly, pretty much useless commands
     what: () => log("idk."),
     why: () => log("who knows?"),
+
+    // ? display possible commands and their use
     help: () =>
         log(`
     <span class="red">clear</span> - clear the console
@@ -65,7 +74,11 @@ let functions = {
 	    % example: <span class="red">echo 'Hi!'</span>
     <span class="red">help</span> - display command list
     <span class="red">sl</span> - ;)`),
+
+    // ? imitation of the Linux "sl" CLI animation
     sl: () => log("🚂"),
+
+    // ? imitation of the shell "echo" command
     echo: (args) => {
         if (!args.join(" ").includes("'") && !args.join(" ").includes('"'))
             return;
@@ -85,6 +98,7 @@ let functions = {
     },
 };
 
+// ? formatted and unformatted contact info
 let contact = {
     email: "<span class='green'>ahhmerrr.dev@gmail.com</span>",
     phone: "<span class='green'>(864)-508-1948</span>",
@@ -97,12 +111,7 @@ let contact = {
     githubText: "ahhmerrr",
 };
 
-export function append(parent, children) {
-    children.forEach((element) => {
-        parent.append(element);
-    });
-}
-
+// ? append a span with given classes, styles, and text to a parent element
 export function appendSpan(parent, child, classes, styles) {
     $(parent).append(
         `<span ${styles === undefined ? "" : `style=${styles}`}
@@ -112,6 +121,7 @@ export function appendSpan(parent, child, classes, styles) {
     );
 }
 
+// ? append a pre with given classes, styles, and text to a parent element
 export function appendPre(parent, child, classes, styles) {
     $(parent).append(
         `<pre ${styles === undefined ? "" : `style=${styles}`}
@@ -121,10 +131,12 @@ export function appendPre(parent, child, classes, styles) {
     );
 }
 
+// ? log to terminal display
 export function log(text, classes, styles) {
     appendPre("#terminalDisplay", text, classes, styles);
 }
 
+// ? run a user command
 export function runCommand() {
     const command = $("#terminalInputText").val().split(" ");
 
@@ -132,7 +144,7 @@ export function runCommand() {
 
     if (command[0] === "") {
         return;
-    } else if (functions[command[0]] == undefined) {
+    } else if (commands[command[0]] == undefined) {
         log(
             `<span class='red bold'>ERR: invalid command "${command[0]}"</span>`
         );
@@ -140,7 +152,7 @@ export function runCommand() {
         return;
     }
 
-    functions[command[0]](command);
+    commands[command[0]](command);
 
     $("#terminalInputText").val("");
 }

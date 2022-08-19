@@ -1,5 +1,5 @@
 import { terminal } from "../chilishell/src/chilishell.js";
-import { log, runCommand } from "../chilishell/src/terminal.js";
+import { runCommand } from "../chilishell/src/terminal.js";
 
 // ? preventDefault utility function
 const preventDefault = (e) => e.preventDefault();
@@ -20,98 +20,98 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 $(window).on("load", run());
 
 function run() {
-	// ? load terminal, add event listeners, and display text
-	loadTerminal();
-	addListeners();
-	displayText();
+    // ? load terminal, add event listeners, and display text
+    loadTerminal();
+    addListeners();
+    displayText();
 
-	console.log(
-		"%c hello there, beautiful! 😍",
-		"color: crimson; font-weight: bold;"
-	);
+    console.log(
+        "%c hello there, beautiful! 😍",
+        "color: crimson; font-weight: bold;"
+    );
 }
 
 // ? load the terminal
 function loadTerminal() {
-	terminal("#terminal");
+    terminal("#terminal");
 }
 
 // ? add event listeners to scroll buttons
 function addListeners() {
-	// ? first scroll down button
-	$("#scrollDown1").on("click", (e) => {
-		document.documentElement.scrollTo({
-			top: document.body.scrollHeight / 4,
-			behavior: "smooth",
-		});
-	});
+    // ? first scroll down button
+    $("#scrollDown1").on("click", (e) => {
+        document.documentElement.scrollTo({
+            top: document.body.scrollHeight / 4,
+            behavior: "smooth",
+        });
+    });
 
-	// ? second scroll down button
-	$("#scrollDown2").on("click", (e) => {
-		document.documentElement.scrollTo({
-			top: document.body.scrollHeight / 2,
-			behavior: "smooth",
-		});
-	});
+    // ? second scroll down button
+    $("#scrollDown2").on("click", (e) => {
+        document.documentElement.scrollTo({
+            top: document.body.scrollHeight / 2,
+            behavior: "smooth",
+        });
+    });
 
-	// ? third scroll down button
-	$("#scrollDown3").on("click", (e) => {
-		document.documentElement.scrollTo({
-			top: document.body.scrollHeight,
-			behavior: "smooth",
-		});
-	});
+    // ? third scroll down button
+    $("#scrollDown3").on("click", (e) => {
+        document.documentElement.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+        });
+    });
 
-	// ? last button (scroll up button)
-	$("#scrollUp").on("click", (e) => {
-		document.documentElement.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	});
+    // ? last button (scroll up button)
+    $("#scrollUp").on("click", (e) => {
+        document.documentElement.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
 
-	// ? terminal input keypress
-	$("#terminalInputText").on("keypress", (e) => {
-		if (e.key === "Enter") runCommand();
-	});
+    // ? terminal input keypress
+    $("#terminalInputText").on("keypress", (e) => {
+        if (e.key === "Enter") runCommand();
+    });
 }
 
 // ? display typed text
 async function displayText() {
-	// ? 1 second wait at the beginning, for effect
-	await wait(1000);
+    // ? 1 second wait at the beginning, for effect
+    await wait(1000);
 
-	// ? iterate over message; yes, i use for loops. fight me >:(
-	for (let i = 0; i < message.length; i++) {
-		// ? 1 in 4 chance of mistyped character
-		if (Math.random() < 0.25) {
-			// ? random error character from characters that have not been typed yet
-			$("#delayText").append(message[rand(i, message.length)]);
+    // ? iterate over message; yes, i use for loops. fight me >:(
+    for (let i = 0; i < message.length; i++) {
+        // ? 1 in 4 chance of mistyped character
+        if (Math.random() < 0.25) {
+            // ? random error character from characters that have not been typed yet
+            $("#delayText").append(message[rand(i, message.length)]);
 
-			// ? if the message has been displayed at random, break
-			if ($("#delayText").html() === message) break;
+            // ? if the message has been displayed at random, break
+            if ($("#delayText").html() === message) break;
 
-			// ? wait for a random time before backspacing
-			await waitRandom();
+            // ? wait for a random time before backspacing
+            await waitRandom();
 
-			// ? backspace
-			$("#delayText").html($("#delayText").html().substring(0, i));
+            // ? backspace
+            $("#delayText").html($("#delayText").html().substring(0, i));
 
-			// ? wait for a random time, for effect
-			await waitRandom();
-			i--;
-		} else {
-			// ? type correct character
-			$("#delayText").append(message[i]);
+            // ? wait for a random time, for effect
+            await waitRandom();
+            i--;
+        } else {
+            // ? type correct character
+            $("#delayText").append(message[i]);
 
-			// ? wait for a random time
-			await waitRandom();
-		}
-	}
+            // ? wait for a random time
+            await waitRandom();
+        }
+    }
 
-	// ? wait a bit more, just for effect
-	await waitRandom(500, 1000);
+    // ? wait a bit more, just for effect
+    await waitRandom(500, 1000);
 
-	// ? proper grammar is always appreciated
-	$("#delayText").append(".");
+    // ? proper grammar is always appreciated
+    $("#delayText").append(".");
 }
