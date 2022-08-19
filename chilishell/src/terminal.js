@@ -26,7 +26,7 @@ let commands = {
     // ? get contact info
     my: (args) => {
         if (args.length === 1) {
-            log("Please enter argument(s) for this command.");
+            log("please enter argument(s) for this command.");
             return;
         } else {
             args.forEach((arg, index) => {
@@ -39,16 +39,23 @@ let commands = {
                     navigator.clipboard.writeText(
                         contact[args[index - 1] + "Text"]
                     );
-                    log(`Copied ${args[index - 1]} to clipboard.`);
+                    log(`copied ${args[index - 1]} to clipboard.`);
                 } else if (
                     arg != "my" &&
                     contact[arg] === undefined &&
                     arg !== "-c"
                 )
-                    log(`Invalid arg "${arg}" ignored.`);
+                    log(`invalid arg "${arg}" ignored.`);
             });
         }
     },
+
+    // ? open source link in new tab
+    source: () => {
+        window.open("https://github.com/ahhmerrr/chilisite", "_blank");
+        log("ppened source code in new tab.");
+    },
+
     // ? silly, pretty much useless commands
     what: () => log("idk."),
     why: () => log("who knows?"),
@@ -146,7 +153,7 @@ export function runCommand() {
         return;
     } else if (commands[command[0]] == undefined) {
         log(
-            `<span class='red bold'>ERR: invalid command "${command[0]}"</span>`
+            `<span class='red bold'>err: invalid command "${command[0]}"</span>`
         );
         $("#terminalInputText").val("");
         return;
