@@ -1,6 +1,6 @@
 # chilisite
 
-## My personal website!
+### My personal website!
 
 ![image](https://user-images.githubusercontent.com/110292814/185671659-c41a0793-0249-41f4-9c78-6cbffb47dcac.png)
 
