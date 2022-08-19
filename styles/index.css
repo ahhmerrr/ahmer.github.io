@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* ? vars */
+:root {
+    --header-color: #6d0c0c;
+    --background-color: #ffddb9;
+    --scrollbar-color: #9d3838;
+    --scrollbar-background-color: #cb7070;
+    --code-background-color: #2d2a2e;
+    --terminal-text-color: #effcfa;
+    --default-font: "Montserrat", sans-serif;
+    --code-font: "Inconsolata", monospace;
+}
+
+/* ? scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+}
+
+/* ? colors */
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.dark-orange {
+    color: darkorange;
+}
+
+.darker-orange {
+    color: rgb(255, 102, 0);
+}
+
+.red {
+    color: crimson;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    background: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+/* ? main div */
+div.main {
+    height: 400vh;
+
+    background: var(--background-color);
+}
+
+/* ? divs corresponding to sections */
+div.first,
+div.second,
+div.third,
+div.fourth {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ? hero code stuff */
+pre.hero-code-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+code.hero-code {
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 5px;
+    background: var(--code-background-color);
+
+    font-size: 20px;
+}
+
+/* ? down arrow + up arrow button stuff */
+div.down-arrow-wrapper,
+div.up-arrow-wrapper {
+    width: 100%;
+    margin-top: auto;
+}
+
+button.img-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 15px;
+
+    transition: ease 0.3s;
+}
+
+button.img-button-up {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 10px;
+
+    transition: ease 0.3s;
+}
+
+button.img-button:hover {
+    transform: translateY(10px);
+}
+
+button.img-button-up:hover {
+    transform: translateY(-10px);
+}
+
+div.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.down-arrow {
+    width: 64px;
+    height: 64px;
+    transform: rotate(180deg);
+}
+
+img.up-arrow {
+    width: 64px;
+    height: 64px;
+}
+
+p.img-text {
+    font-family: var(--default-font);
+    font-size: 20px;
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #00ad97;
+}
+
+/* ? info section styling */
+div.info-wrapper {
+    /* placeholder */
+    appearance: initial;
+}
+
+div.circle {
+    border-radius: 50%;
+    padding: 25px;
+    background: rgb(78, 197, 35);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.degree-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.progress-outer {
+    border-radius: 5px;
+    width: 400px;
+    height: fit-content;
+    background-color: gray;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+div.progress-inner {
+    height: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(78, 197, 35);
+}
+
+div.degree-progress-wrapper {
+    margin-left: 30px;
+}
+
+p.info-paragraph {
+    font-family: var(--default-font);
+    font-size: 15px;
+    text-align: center;
+    margin: 25px;
+}
+
+p.degree-completion-paragraph {
+    margin-top: 0;
+    text-align: center;
+    font-family: var(--default-font);
+    font-weight: bold;
+}
+
+p.completion-info {
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    color: white;
+    font-family: var(--default-font);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+p.gpa-info {
+    font-family: var(--default-font);
+    font-size: 18px;
+    text-align: center;
+
+    color: white;
+}
+
+p.degree-progress-info {
+    font-family: var(--default-font);
+    font-size: 15px;
+    text-align: center;
+
+    color: white;
+}
+
+/* ? media button (GitHub link) styling */
+div.media-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+button.media-button,
+a.media-button {
+    border-radius: 10px;
+    border: 3px solid white;
+
+    background: white;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+    padding-bottom: 0;
+
+    cursor: pointer;
+
+    transition: ease 0.2s;
+    /* animation: shake 2s ease infinite; */
+}
+
+button.media-button:hover,
+a.media-button:hover {
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
+button.media-button > img,
+a.media-button > img {
+    width: 32px;
+    height: 32px;
+}
+
+/* ? terminal */
+div.terminal {
+    background: var(--code-background-color);
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+div.terminal *::selection {
+    color: var(--code-background-color);
+    background: var(--terminal-text-color);
+}
+
+div.terminal-display {
+    background: var(--code-background-color);
+}
+
+div.terminal-input {
+    background: var(--code-background-color);
+    overflow-x: hidden;
+}
+
+.terminal-input-text {
+    display: inline;
+    font-family: var(--code-font);
+    color: var(--terminal-text-color);
+    background: var(--code-background-color);
+    border: none;
+    outline: none;
+    caret-color: var(--terminal-text-color);
+    font-size: 15px;
+    width: 400px;
+    overflow-x: hidden;
+}
+
+.terminal-header {
+    font-family: var(--code-font);
+    color: var(--terminal-text-color);
+    margin: 0;
+}
+
+.command-line {
+    color: var(--terminal-text-color);
+    background: var(--code-background-color);
+    font-family: var(--code-font);
+    font-size: 15px;
+    margin: 0;
+}
+
+.terminal-cursor {
+    animation: terminalCursor step-end 1s infinite;
+}
+
+.terminal-prompt {
+    font-family: var(--code-font);
+    color: var(--terminal-text-color);
+    font-size: 15px;
+}
+
+/* ? header + animated typed text styling */
+
+.header-text {
+    font-size: 4em;
+    font-family: var(--default-font);
+    font-weight: 600;
+    text-align: center;
+
+    margin-bottom: 0;
+
+    color: var(--header-color);
+}
+
+.subheader-text {
+    font-size: 1.5em;
+    font-family: var(--default-font);
+    font-weight: 400;
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: var(--header-color);
+}
+
+.typing-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typing-text {
+    font-family: var(--code-font);
+    font-weight: 400;
+    text-align: center;
+    font-size: 30px;
+
+    padding-right: 5px;
+
+    animation: cursor step-end 1s infinite;
+}
+
+/* ! SF Mono font (testing) */
+@font-face {
+    font-family: "SF Mono Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("SF Mono Regular"),
+        url("../assets/SFMonoRegular.woff") format("woff");
+}
+
+/* ? animation keyframes */
+@keyframes cursor {
+    from,
+    to {
+        border-right: 5px solid transparent;
+    }
+
+    50% {
+        border-right: 5px solid var(--code-background-color);
+    }
+}
+
+@keyframes terminalCursor {
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: var(--terminal-text-color);
+    }
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ? media queries, for responsiveness */
+@media screen and (width<=1080px) {
+    code.hero-code {
+        font-size: 15px;
+    }
+}
+
+@media screen and (width<=805px) {
+    code.hero-code,
+    command-line {
+        font-size: 12px;
+    }
+
+    div.degree-progress-outer {
+        width: 250px;
+    }
+
+    div.progress-inner {
+        height: 15px;
+        border-radius: 3px;
+    }
+
+    div.circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    p.gpa-info {
+        font-size: 15px;
+    }
+}
+
+@media screen and (width<=720px) {
+    .header-text {
+        font-size: 2em;
+    }
+
+    p.info-paragraph {
+        font-size: 15px;
+    }
+}
+
+@media screen and (width<=560px) {
+    p.info-paragraph {
+        font-size: 12px;
+    }
+}
