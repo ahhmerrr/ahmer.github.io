@@ -1,6 +1,8 @@
 # chilisite
 My personal website!
 
+![image](https://user-images.githubusercontent.com/110292814/185671659-c41a0793-0249-41f4-9c78-6cbffb47dcac.png)
+
 Made minimalistically, using no dependencies except for JQuery.
 
 The terminal ("ChiliShell") was inspired by [JQuery Terminal](https://terminal.jcubic.pl/). It is not really a shell, of course.
