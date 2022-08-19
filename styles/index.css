@@ -1,7 +1,9 @@
+/* ? font imports */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 /* ? vars */
+/* #region vars */
 :root {
     --header-color: #6d0c0c;
     --background-color: #ffddb9;
@@ -12,8 +14,10 @@
     --default-font: "Montserrat", sans-serif;
     --code-font: "Inconsolata", monospace;
 }
+/* #endregion */
 
-/* ? scrollbar */
+/* ? scrollbar styling */
+/* #region scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -25,8 +29,10 @@
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-color);
 }
+/* #endregion */
 
-/* ? colors */
+/* ? colors and other font styles */
+/* #region font */
 .yellow {
     color: yellow;
 }
@@ -62,7 +68,10 @@
 .italic {
     font-style: italic;
 }
+/* #endregion */
 
+/* ? main styling */
+/* #region mains */
 body {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -88,8 +97,10 @@ div.fourth {
     display: flex;
     flex-direction: column;
 }
+/* #endregion */
 
 /* ? hero code stuff */
+/* #region hero */
 pre.hero-code-wrapper {
     display: flex;
     justify-content: center;
@@ -107,8 +118,52 @@ code.hero-code {
 
     font-size: 20px;
 }
+/* #endregion */
+
+/* ? header + animated typed text styling */
+/* #region header */
+.header-text {
+    font-size: 4em;
+    font-family: var(--default-font);
+    font-weight: 600;
+    text-align: center;
+
+    margin-bottom: 0;
+
+    color: var(--header-color);
+}
+
+.subheader-text {
+    font-size: 1.5em;
+    font-family: var(--default-font);
+    font-weight: 400;
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: var(--header-color);
+}
+
+.typing-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typing-text {
+    font-family: var(--code-font);
+    font-weight: 400;
+    text-align: center;
+    font-size: 30px;
+
+    padding-right: 5px;
+
+    animation: cursor step-end 1s infinite;
+}
+/* #endregion */
 
 /* ? down arrow + up arrow button stuff */
+/* #region arrow */
 div.down-arrow-wrapper,
 div.up-arrow-wrapper {
     width: 100%;
@@ -170,7 +225,10 @@ p.img-text {
     color: #00ad97;
 }
 
+/* #endregion */
+
 /* ? info section styling */
+/* #region info */
 div.info-wrapper {
     /* placeholder */
     appearance: initial;
@@ -253,8 +311,10 @@ p.degree-progress-info {
 
     color: white;
 }
+/* #endregion */
 
 /* ? media button (GitHub link) styling */
+/* #region media */
 div.media-wrapper {
     display: flex;
     justify-content: center;
@@ -292,8 +352,10 @@ a.media-button > img {
     width: 32px;
     height: 32px;
 }
+/* #endregion */
 
 /* ? terminal */
+/* #region terminal */
 div.terminal {
     background: var(--code-background-color);
     padding: 10px;
@@ -352,58 +414,10 @@ div.terminal-input {
     color: var(--terminal-text-color);
     font-size: 15px;
 }
-
-/* ? header + animated typed text styling */
-
-.header-text {
-    font-size: 4em;
-    font-family: var(--default-font);
-    font-weight: 600;
-    text-align: center;
-
-    margin-bottom: 0;
-
-    color: var(--header-color);
-}
-
-.subheader-text {
-    font-size: 1.5em;
-    font-family: var(--default-font);
-    font-weight: 400;
-    text-align: center;
-
-    margin-top: 10px;
-
-    color: var(--header-color);
-}
-
-.typing-text-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.typing-text {
-    font-family: var(--code-font);
-    font-weight: 400;
-    text-align: center;
-    font-size: 30px;
-
-    padding-right: 5px;
-
-    animation: cursor step-end 1s infinite;
-}
-
-/* ! SF Mono font (testing) */
-@font-face {
-    font-family: "SF Mono Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: local("SF Mono Regular"),
-        url("../assets/SFMonoRegular.woff") format("woff");
-}
+/* #endregion */
 
 /* ? animation keyframes */
+/* #region keyframes */
 @keyframes cursor {
     from,
     to {
@@ -443,8 +457,10 @@ div.terminal-input {
         transform: rotate(0deg);
     }
 }
+/* #endregion */
 
 /* ? media queries, for responsiveness */
+/* #region media */
 @media screen and (width<=1080px) {
     code.hero-code {
         font-size: 15px;
@@ -491,3 +507,4 @@ div.terminal-input {
         font-size: 12px;
     }
 }
+/* #endregion */
