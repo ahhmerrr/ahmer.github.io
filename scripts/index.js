@@ -1,4 +1,3 @@
-import { terminal } from "../chilishell/src/chilishell.js";
 import { runCommand } from "../chilishell/src/terminal.js";
 
 // ? preventDefault utility function
@@ -20,8 +19,7 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 $(window).on("load", run());
 
 function run() {
-    // ? load terminal, add event listeners, and display text
-    loadTerminal();
+    // ? add event listeners and display text
     addListeners();
     displayText();
 
@@ -29,11 +27,6 @@ function run() {
         "%c hello there, beautiful! 😍",
         "color: crimson; font-weight: bold;"
     );
-}
-
-// ? load the terminal
-function loadTerminal() {
-    terminal("#terminal");
 }
 
 // ? add event listeners to scroll buttons
