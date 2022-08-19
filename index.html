@@ -6,25 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ahmer Raza</title>
 
+        <!-- ? favicon -->
         <link rel="shortcut icon" href="./assets/chili.png" type="image/png" />
-
+        <!-- ? import main stylesheet -->
         <link rel="stylesheet" href="./styles/index.css" />
     </head>
-    <body id="body">
+    <body>
+
+        <!-- ? main div; holds all the content -->
         <div class="main">
+
+            <!-- ? first 100vh section -->
             <div class="first">
+
+                <!-- ? header and subheader -->
                 <h1 class="header-text">Ahmer Raza</h1>
                 <h2 class="subheader-text">cs uni sophomore</h2>
+
+                <!-- ? stylized code at the hero section -->
                 <pre class="hero-code-wrapper">
 <code class="hero-code"><i><span style="color:#78DCE8;">const</span></i> <span style="color:#A9DC76;">greeting</span> <span style="color:#FF6188;">= () => {</span>
     <span style="color:#EFFCFA;">console</span><span style="color:#939293;">.</span><span style="color:#A9DC76;">log</span><span style="color:#FF6188;">(</span><span style="color:#FFD866;">"%c hello there, beautiful! 😍",
                 "color: <span style="color:crimson;">crimson</span>; font-weight: <b>bold</b>"</span><span style="color:#FF6188;">)</span><span style="color:#939293;">;</span>
 <span style="color:#FF6188">}</span></code>
                 </pre>
+
+                <!-- ? typed text at the hero section -->
                 <div class="typing-text-wrapper">
                     <p class="typing-text" id="delayText"></p>
                 </div>
 
+                <!-- ? media information; only GitHub for now -->
                 <div class="media-wrapper">
                     <a
                         href="https://github.com/ahhmerrr"
@@ -38,6 +50,7 @@
                     </a>
                 </div>
 
+                <!-- ? down arrow, scrolls down to next section -->
                 <div class="down-arrow-wrapper">
                     <p class="img-text">
                         C'mon, there's more to know about me...
@@ -54,11 +67,17 @@
                 </div>
             </div>
 
+            <!-- ? second 100vh section -->
             <div class="second">
+
+                <!-- ? header and subheader, again -->
                 <h1 class="header-text">Personal + Academic</h1>
                 <h2 class="subheader-text">past and present</h2>
 
+                <!-- ? information section -->
                 <div class="info-wrapper">
+
+                    <!-- ? information paragraphs -->
                     <p class="info-paragraph">
                         I'm a <b>Computer Science</b> university sophomore from
                         <b>Ithaca, NY</b>; I'm currently pursuing a
@@ -87,11 +106,14 @@
                         presumptuous, I'd say I am.
                     </p>
 
+                    <!-- ? degree info and progress -->
                     <div class="degree-info-wrapper">
+                        <!-- ? GPA circle -->
                         <div class="circle">
                             <p class="gpa-info"><b>4.0</b> GPA</p>
                         </div>
 
+                        <!-- ? degree progress bar -->
                         <div class="degree-progress-wrapper">
                             <p class="degree-completion-paragraph">
                                 Degree completion
@@ -107,6 +129,7 @@
                     </div>
                 </div>
 
+                <!-- ? down arrow, scrolls down to next section -->
                 <div class="down-arrow-wrapper">
                     <p class="img-text">More down here!</p>
                     <div class="img-wrapper">
@@ -121,13 +144,12 @@
                 </div>
             </div>
 
+            <!-- ? third 100vh section -->
             <div class="third">
                 <h1 class="header-text">Exposure</h1>
                 <h2 class="subheader-text">what i know</h2>
 
-                <div class="typing-text-wrapper">
-                    <p class="typing-text" id="delayText"></p>
-                </div>
+                <!-- TODO: add progress bars that correspond to understanding of CS concepts -->
 
                 <div class="down-arrow-wrapper">
                     <p class="img-text">Yet more...</p>
@@ -143,12 +165,20 @@
                 </div>
             </div>
 
+            <!-- ? fourth and last 100vh section -->
             <div class="fourth">
+
+                <!-- ? header and subheader -->
                 <h1 class="header-text">Misc</h1>
                 <h2 class="subheader-text">who doesn't love terminals?</h2>
 
+                <!-- ? interactive terminal -->
                 <div class="terminal" id="terminal">
+
+                    <!-- ? the display section of the terminal -->
                     <div class="terminal-display" id="terminalDisplay">
+
+                        <!-- ? header / welcome message; can be cleared and redisplayed -->
                         <pre class="terminal-header">
                           <span class="yellow">(</span>                       
    <span class="yellow">(       <span class="orange">)</span>     (      )\ )    <span class="orange">)</span>       (   (</span>   
@@ -162,10 +192,16 @@
     run <span class="red bold">"help"</span> for a list of available commands
                         </pre>
                     </div>
+
+                    <!-- ? the input section of the terminal -->
                     <div class="terminal-input" id="terminalInput">
+
+                        <!-- ? the user prompt -->
                         <span class="terminal-prompt" id="terminalPrompt"
                             >🌶️ ></span
                         >
+
+                        <!-- ? the actual input -->
                         <input
                             class="terminal-input-text"
                             autocomplete="false"
@@ -177,6 +213,7 @@
                     </div>
                 </div>
 
+                <!-- ? up arrow; scrolls all the way back up to the top -->
                 <div class="up-arrow-wrapper">
                     <p class="img-text">Back up we go!</p>
                     <div class="img-wrapper">
