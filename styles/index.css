@@ -41,6 +41,14 @@
     background-color: yellow;
 }
 
+.gold {
+    color: rgb(240, 204, 0);
+}
+
+.bg-gold {
+    background-color: rgb(240, 204, 0);
+}
+
 .orange {
     color: orange;
 }
@@ -87,6 +95,22 @@
 
 .bg-green {
     background-color: green;
+}
+
+.purple {
+    color: purple;
+}
+
+.bg-purple {
+    background-color: blueviolet;
+}
+
+.white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
 }
 
 .bold {
@@ -382,19 +406,53 @@ a.media-button > img {
 }
 /* #endregion */
 
-/* ? exposure section styling */
-/* #region exposure */
+/* ? skills section styling */
+/* #region skills */
 div.cs-progress-outer {
     width: 100% - 50px;
+    height: fit-content;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 25px;
+
+    background-color: gray;
+    border-radius: 10px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
 }
 
 div.cs-progress-inner {
-    height: 25px;
+    height: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+p.cs-progress-info {
+    font-family: var(--default-font);
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    margin-right: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+p.cs-progress-header {
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    color: black;
+    font-family: var(--default-font);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 /* #endregion */
 
