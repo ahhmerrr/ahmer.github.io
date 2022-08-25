@@ -8,7 +8,7 @@ made minimalistically, with no dependencies except for JQuery.
 
 the code segment at the beginning is JavaScript, stylized to look like VSCode using the [Monokai Pro](https://monokai.pro/) theme.
 
-the typed text effect was inspired by myself making typing mistakes all the time :)
+the typed text effect was inspired by myself making typing mistakes all the time.
 
 the terminal ("ChiliShell") was inspired by [JQuery Terminal](https://terminal.jcubic.pl/). it isn't really a shell, of course.
 
