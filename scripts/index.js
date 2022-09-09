@@ -24,7 +24,7 @@ function run() {
     displayText();
 
     console.log(
-        "%c hello there, beautiful! 😍",
+        "%c hello there, beautiful!",
         "color: crimson; font-weight: bold;"
     );
 }
