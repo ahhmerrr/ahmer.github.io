@@ -170,14 +170,16 @@ code.hero-code {
     border-radius: 5px;
     background: var(--code-background-color);
 
-    font-size: clamp(15px, 2vw, 20px);
+    /* 15px min */
+    font-size: clamp(0px, 2vw, 20px);
 }
 /* #endregion */
 
 /* ? header + animated typed text styling */
 /* #region header */
 .header-text {
-    font-size: clamp(50px, 5vw, 75px);
+    /* 50px min */
+    font-size: clamp(0px, 5vw, 75px);
     font-family: var(--default-font);
     font-weight: 600;
     text-align: center;
@@ -189,7 +191,8 @@ code.hero-code {
 }
 
 .subheader-text {
-    font-size: clamp(20px, 2vw, 30px);
+    /* 20px min */
+    font-size: clamp(0px, 2vw, 30px);
     font-family: var(--default-font);
     font-weight: 400;
     text-align: center;
@@ -209,7 +212,8 @@ code.hero-code {
     font-family: var(--code-font);
     font-weight: 400;
     text-align: center;
-    font-size: max(2.5vw, 25px);
+    /* 25px min */
+    font-size: clamp(0px, 2.5vw, 40px);
 
     padding-right: 5px;
 
@@ -329,7 +333,8 @@ div.degree-progress-wrapper {
 
 p.info-paragraph {
     font-family: var(--default-font);
-    font-size: clamp(18px, 1.5vw, 25px);
+    /* 18px min */
+    font-size: clamp(0px, 1.5vw, 25px);
     text-align: center;
     margin: 25px;
 }
