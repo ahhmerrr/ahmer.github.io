@@ -143,11 +143,20 @@ export function log(text, classes, styles) {
     appendPre("#terminalDisplay", text, classes, styles);
 }
 
+export function logLine(text) {
+    $("#terminalDisplay").append(`
+    <div class="command-line-wrapper">
+        <span class="command-line">🌶️ ></span>
+        <input class="terminal-input-text" type="text" value="${text}" readonly />
+    </div>
+    `);
+}
+
 // ? run a user command
 export function runCommand() {
     const command = $("#terminalInputText").val().split(" ");
 
-    log(`🌶️ > ${command.join(" ")}`);
+    logLine(command.join(" "));
 
     if (command[0] === "") {
         return;
