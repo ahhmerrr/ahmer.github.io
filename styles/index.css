@@ -575,11 +575,6 @@ div.command-line-wrapper {
 
 /* ? media queries, for responsiveness */
 /* #region media */
-@media screen and (width<=1080px) {
-    code.hero-code {
-        /* font-size: 15px; */
-    }
-}
 
 @media screen and (width<=805px) {
     /* code.hero-code, */
@@ -605,20 +600,7 @@ div.command-line-wrapper {
     }
 }
 
-@media screen and (width<=720px) {
-    .header-text {
-        /* font-size: 3em; */
-    }
-
-    p.info-paragraph {
-        /* font-size: 15px; */
-    }
-}
-
 @media screen and (width<=560px) {
-    p.info-paragraph {
-        /* font-size: 12px; */
-    }
     pre.hero-code-wrapper {
         display: none;
     }
